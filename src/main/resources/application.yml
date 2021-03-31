@@ -1,0 +1,12 @@
+logging:
+    file:
+        name: log-mdc.log
+        path: /logs
+    pattern:
+        console: '%d{yyyy-MM-dd HH:mm:ss} %-5level [%X{UID}] [%X{traceId}] %msg%n'
+        file: '%d{yyyy-MM-dd HH:mm:ss} %-5level [%X{UID}] [%X{traceId}] %msg%n'
+server:
+    port: 8081
+spring:
+    application:
+        name: log-mdc
