@@ -29,8 +29,8 @@ public class TestServiceImpl implements ITestService {
     @Override
     @Async
     public void test() {
-        MDC.put("traceId", UUID.randomUUID().toString());
-        MDC.put("UID", UUID.randomUUID().toString());
+        // MDC.put("traceId", UUID.randomUUID().toString());
+        // MDC.put("UID", UUID.randomUUID().toString());
         logger.info("测试Spring自带的Async异步注解");
         taskExecutor.execute(() -> {
             logger.info("测试线程池");
